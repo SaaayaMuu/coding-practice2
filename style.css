@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: min(1.5vw, 16px);
+  letter-spacing: 0.2em;
+}
+body header {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  padding: 20px 40px;
+}
+body header .icon {
+  display: block;
+}
+body header img {
+  width: 200px;
+  margin-bottom: 50px;
+}
+body header .menu {
+  font-size: 0.9em;
+  line-height: 35px;
+}
+body header .menu li {
+  list-style: none;
+}
+body header .menu li:nth-child(6) {
+  margin-bottom: 50px;
+}
+body header .menu li a {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+body header .menu li a:hover {
+  background: linear-gradient(transparent 60%, #ffff66 0%);
+}
+body #container {
+  margin-left: 300px;
+}
+body #container main {
+  width: 100%;
+  height: 100%;
+}
+body #container main #video {
+  width: 100%;
+  height: 100vh;
+}
+body #container main #video .bg-video {
+  position: fixed;
+  z-index: -10;
+}
+body #container main .project {
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.88));
+}
+body #container main .project .sec-title {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+body #container main .project .sec-title::before, body #container main .project .sec-title::after {
+  content: "";
+  border-top: 2px solid;
+  width: 20%;
+}
+body #container main .project .project-photo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+body #container main .project .project-photo a {
+  position: relative;
+  width: 50%;
+  padding: 0 20px 40px;
+}
+body #container main .project .project-photo a .project-img {
+  width: 100%;
+  border: 2px solid white;
+}
+body #container main .project .project-photo a p {
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+}
+body #container main .project .character {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+body #container main .project .character li {
+  width: 30%;
+  max-width: 250px;
+  list-style: none;
+  color: white;
+  margin: 0;
+}
+body #container main .project .character li:nth-child(2) {
+  margin: 0 20px;
+}
+body #container main .project .character li a {
+  display: block;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  padding: calc(50% - 1em) 0;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, transparent 50%, transparent) 100% 0/200% 100%;
+  transition: background-position 0.3s;
+}
+body #container main .project .character li a:hover {
+  background-position: 0 0;
+}
+body #container main .project .character li .character-title {
+  font-size: 1em;
+}
+body #container main .project .character li p {
+  font-size: 0.8em;
+}
+body #container main .flow {
+  background-color: white;
+}
+body #container main .flow .sec-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+body #container main .flow .sec-title::before, body #container main .flow .sec-title::after {
+  content: "";
+  border-top: 2px solid;
+  width: 20%;
+}
+body #container main .flow div {
+  display: flex;
+  justify-content: center;
+}
+body #container main .flow div .flow-map {
+  width: 200px;
+  margin-right: 80px;
+}
+body #container main .flow div .flow-map ol {
+  width: 200px;
+  position: relative;
+}
+body #container main .flow div .flow-map ol::before {
+  content: "";
+  width: 50px;
+  height: 600px;
+  background-color: #FFCC00;
+  position: absolute;
+  top: 0;
+  left: 75px;
+}
+body #container main .flow div .flow-map ol li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  margin-bottom: 70px;
+  background-color: #414141;
+  color: white;
+  position: relative;
+}
+body #container main .flow div .flow-map ol li::after {
+  content: "";
+  border-top: 30px solid #414141;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  position: absolute;
+  top: 59px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+body #container main .flow div .flow-text {
+  max-width: 600px;
+}
+body #container main .flow div .flow-text dl dt {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  border-bottom: 1px solid #414141;
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+body #container main .flow div .flow-text dl dt span {
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #414141;
+  border-radius: 50%;
+  background-color: #414141;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: -45px;
+}
+body #container main .flow div .flow-text dl dd {
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+body #container .info {
+  background-color: white;
+  padding-bottom: 50px;
+}
+body #container .info .sec-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+body #container .info .sec-title::before, body #container .info .sec-title::after {
+  content: "";
+  border-top: 2px solid;
+  width: 20%;
+}
+body #container .info .info-box {
+  display: flex;
+  justify-content: center;
+}
+body #container .info .info-box a {
+  width: 30%;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 50px 0;
+  text-align: center;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: 0.1s;
+}
+body #container .info .info-box a:hover {
+  outline: 3px solid black;
+}
+body #container .info .info-box a:nth-child(2) {
+  margin: 0 20px;
+}
+body #container .info .info-box a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border: 15px solid transparent;
+  border-right: 15px solid black;
+  transform: rotate(-135deg);
+}
+body #container footer {
+  background-color: black;
+  width: 100%;
+  height: 150px;
+  padding-top: 40px;
+  position: relative;
+}
+body #container footer ul {
+  display: flex;
+  justify-content: center;
+}
+body #container footer ul li {
+  list-style: none;
+  color: white;
+  border-right: 1px solid white;
+  padding: 0 10px;
+}
+body #container footer p {
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0;
+}/*# sourceMappingURL=style.css.map */
