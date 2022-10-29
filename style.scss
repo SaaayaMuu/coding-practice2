@@ -5,6 +5,20 @@
   padding: 0;
 }
 
+$tb: 900px;
+$sp: 425px;
+
+@mixin tb {
+    @media screen and (max-width: ($tb)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+
 @mixin title-design {
     display: flex;
     align-items: center;
@@ -25,16 +39,36 @@ body {
         height: 100%;
         position: fixed;
         padding: 20px 40px;
-        .icon {
-            display: block;
+        background-color: white;
+        z-index: 100;
+        @include tb {
+            width: 100%;
+            height: 70px;
+            padding: 0;
         }
-        img {
+        .icon {
             width: 200px;
             margin-bottom: 50px;
+            display: block;
+            @include tb {
+                width: 160px;
+                padding: 15px 0 0 20px;
+                margin: 0;
+            }
+        }
+        img {
+            width: 100%;
+            @include tb {
+                width: 100%;
+                margin-bottom: 0;
+            }
         }
         .menu {
             font-size: 0.9em;
             line-height: 35px;
+            @include tb {
+                display: none;
+            }
             li {
                 list-style: none;
                 &:nth-child(6) {
@@ -54,9 +88,40 @@ body {
 
 
         }
+        #humburger {
+            display: none;
+            width: 35px;
+            height: 35px;
+            position: fixed;
+            top: 17px;
+            right: 10px;
+            span {
+                position: absolute;
+                background-color: black;
+                width: 100%;
+                height: 2px;
+                &:nth-child(1) {
+                    top: 5px;
+                }
+                &:nth-child(2) {
+                    top: 17px;
+                }
+                &:nth-child(3) {
+                    bottom: 5px;
+                }
+                
+            }
+            @include tb {
+                display: block;
+            }
+        }
     }
     #container {
         margin-left: 300px;
+        z-index: 50;
+        @include tb {
+            margin: 0;
+        }
         main {
             width: 100%;
             height: 100%;
@@ -67,6 +132,10 @@ body {
                     position: fixed;
                     // top: -220px;
                     z-index: -10;
+                    @include tb {
+
+                        top: 70px;
+                    }
                 }
             }
             .project {
@@ -161,6 +230,7 @@ body {
                 div {
                     display:flex;
                     justify-content: center;
+                    margin: 0 10px;
                     .flow-map {
                         width: 200px;
                         margin-right: 80px;
@@ -247,7 +317,6 @@ body {
                 justify-content: center;
                 a {
                     width: 30%;
-                    min-width: 200px;
                     max-width: 300px;
                     padding: 50px 0;
                     text-align: center;

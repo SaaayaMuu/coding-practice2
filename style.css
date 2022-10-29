@@ -13,17 +13,45 @@ body header {
   height: 100%;
   position: fixed;
   padding: 20px 40px;
+  background-color: white;
+  z-index: 100;
+}
+@media screen and (max-width: 900px) {
+  body header {
+    width: 100%;
+    height: 70px;
+    padding: 0;
+  }
 }
 body header .icon {
-  display: block;
-}
-body header img {
   width: 200px;
   margin-bottom: 50px;
+  display: block;
+}
+@media screen and (max-width: 900px) {
+  body header .icon {
+    width: 160px;
+    padding: 15px 0 0 20px;
+    margin: 0;
+  }
+}
+body header img {
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  body header img {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 body header .menu {
   font-size: 0.9em;
   line-height: 35px;
+}
+@media screen and (max-width: 900px) {
+  body header .menu {
+    display: none;
+  }
 }
 body header .menu li {
   list-style: none;
@@ -39,8 +67,42 @@ body header .menu li a {
 body header .menu li a:hover {
   background: linear-gradient(transparent 60%, #ffff66 0%);
 }
+body header #humburger {
+  display: none;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 17px;
+  right: 10px;
+}
+body header #humburger span {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 2px;
+}
+body header #humburger span:nth-child(1) {
+  top: 5px;
+}
+body header #humburger span:nth-child(2) {
+  top: 17px;
+}
+body header #humburger span:nth-child(3) {
+  bottom: 5px;
+}
+@media screen and (max-width: 900px) {
+  body header #humburger {
+    display: block;
+  }
+}
 body #container {
   margin-left: 300px;
+  z-index: 50;
+}
+@media screen and (max-width: 900px) {
+  body #container {
+    margin: 0;
+  }
 }
 body #container main {
   width: 100%;
@@ -53,6 +115,11 @@ body #container main #video {
 body #container main #video .bg-video {
   position: fixed;
   z-index: -10;
+}
+@media screen and (max-width: 900px) {
+  body #container main #video .bg-video {
+    top: 70px;
+  }
 }
 body #container main .project {
   padding: 100px 0;
@@ -150,6 +217,7 @@ body #container main .flow .sec-title::before, body #container main .flow .sec-t
 body #container main .flow div {
   display: flex;
   justify-content: center;
+  margin: 0 10px;
 }
 body #container main .flow div .flow-map {
   width: 200px;
@@ -240,7 +308,6 @@ body #container .info .info-box {
 }
 body #container .info .info-box a {
   width: 30%;
-  min-width: 200px;
   max-width: 300px;
   padding: 50px 0;
   text-align: center;
